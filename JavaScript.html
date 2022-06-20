@@ -7,15 +7,35 @@
     <title>SheCodes</title>
   </head>
   <style>
+    h1,
+    h2 {
+      text-align: center;
+    }
     h1 {
       color: blue;
       text-align: center;
     }
+    button {
+      display: block;
+      margin: auto;
+      cursor: pointer;
+    }
   </style>
   <body>
-    <h1>JavaScript</h1>
+    <h1>SheCodes</h1>
+    <h2>Cording workshop for women</h2>
+    <button>Apply now</button>
     <script>
-      alert("Hello world");
+      let firstName = prompt("What is your first name");
+      let lastName = prompt("What is your last name");
+      let fullName = firstName + " " + lastName;
+      alert(fullName);
+      let language = prompt("What language do you speek?");
+      alert("You speak " + language);
+
+      console.log(firstName + "! Let's code!");
+      // this is a comment
+      /* or this is a comment */
     </script>
   </body>
 </html>
