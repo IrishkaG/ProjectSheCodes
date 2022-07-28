@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyProjectWithSheCodes</title>
+  </head>
+  <style>
+   body {
+      text-align: center;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      background-image: linear-gradient(to top, #aa9af3 0%, #79ceff 50%);
+      color: #fff;
+      width: 50%;
+      margin: 60px auto;
+    
+    }
+    h1 {
+      color: rgb(74, 74, 247);
+      font-size: 75px;
+      
+    }
+    span {
+      color: rgb(255, 231, 20);
+    }
+    h2{
+      font-size: 50px;
+    }
+    hr{    
+    border-width: 2px;    
+    }
+    img {
+      margin: 0 auto;
+      display: block;
+      border-radius: 4px;
+      max-width: 40%;
+    }
+    p,td {    
+    font-size: 30px;
+    text-align: justify;
+    }
+    .learn{
+        font: size 5px;               
+    } 
+     .joinButton {
+        border: 1px solid rgb(106, 6, 146);
+        border-radius: 30px;
+        box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        color:  rgb(156, 15, 212);
+        font-size: 40px;
+        background: transparent;
+        padding: 20px 20px;
+        transition: all 200ms ease;
+        display: block;
+        margin: 30px auto;
+        text-transform: uppercase;
+    }
+   .joinButton:hover {
+        background: white;
+        color:  rgb(106, 6, 146);
+        border: 1px solid rgb(191, 23, 241);
+        text-transform: uppercase;
+      }
+      
+      .table{      
+      
+       padding: 20px;
+       width:100%;
+       text-align: center;
+       height: 90px;    
+       background-color: transparent;
+    }
+    .footer{
+        font-size: 20px;
+        text-align: center;
+    }
+   
+   
+   
+  </style>
+  <body>
+    <div clsss = "container">
+      <h1>I love <span>hiking</span></h1>
+      <h2>Recommended hiking trails in Ukraine.</h2>
+      <hr>
+      <img
+        src="https://assets.bucketlistly.blog/sites/5adf778b6eabcc00190b75b1/content_entry5b155bed5711a8176e9f9783/5d5e6b29f742640fda9fc5cd/files/ukraine-carpathians-yaremche-travel-photo-20190821141457884-main-image.jpg"
+        alt="Hiking in Ukraine"
+      />
+    <hr>
+      <p>       
+         <strong> Yaremche </strong> may be the best hiking town in Ukraine's Carpathians  and so
+          here is the ultimate hiking guide to <strong> Yaremche </strong> in the Carpathian
+          Mountains in Ukraine that will answer all the burning questions you
+          have about hiking in the Ukrainian Carpathian mountains.
+      
+      <a
+        href="https://en.wikipedia.org/wiki/Yaremche"
+        target="_blank"
+        class="learn"
+      >
+       <em>(Learn more on Wikipedia)</em> 
+      </a>
+       </p>
+       <p>
+       <table class="table" >
+  <tr>
+    <td></p>The dates of camping trips</p></td>
+    <td><p>20.07.2022</p></td>
+    <td><p>20.08.2022</p></td>
+    <td><p>20.09.2022</p></td>
+  </tr>
+</table>
+
+</p>
+      
+      
+       <button class="joinButton">👉 Join the group 🖐</button> 
+      <p class="footer">
+        This page was built by
+        <a
+          href="https://www.linkedin.com/in/iryna-goncharuk-689375213/"
+          target="_blank"
+        >
+          Iryna Goncharuk
+        </a>
+      </p>
+    </div>
+    <script>  
+      function updateHeading(newHeading) {
+      let heading = document.querySelector("h1");
+      heading.innerHTML = newHeading;
+      }
+   
+    function joinTheGroup(){
+      let firstname = prompt("What is your firstname?");
+      let lastname = prompt ("what is your lastname?");
+      let name = firstname.toUpperCase();
+      let surname = lastname.toUpperCase();
+      
+      let age=  prompt ("How old are you?");
+      if(age < 18)
+      {
+        ageDifference = (18 - age);
+        updateHeading ("☹️<br /> Hello " + name + "! You cannot join to our group. Please return in "+ ageDifference + " years")
+      } else
+       {
+      let email;
+     for (;email = prompt("What is your email address?");)
+     {
+      const ate = "@"
+      if(email.includes(ate)){
+        break;
+      }else{
+        alert("Check your email!");        
+      };
+    };
+    let dateForTrip = prompt("What date of trip do you prefer? Availble are 20.07.2022 ; 20.08.2022 or 20.09.2022", "20.07.2022");
+    if (dateForTrip === "20.07.2022" || dateForTrip === "20.08.2022" ||dateForTrip === "20.09.2022")
+    {    
+          updateHeading("😄<br / Your joinning is seccessful > " + name + " " + surname + "! We are glad to see you " + dateForTrip + ".  Additional information on your email box.");
+        } else {
+          updateHeading("☹️<br />Please select correct date");
+        }
+    
+  };
+    };
+    
+    let joinButton = document.querySelector(".joinButton");
+    joinButton.addEventListener("click", joinTheGroup);
+
+
+
+    </script>
+  </body>
+</html>
